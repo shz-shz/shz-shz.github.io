@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>echo的笔记</title>
+    <link rel="stylesheet" href="css/notes_style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="logolike">
+                echo的个人博客
+            </div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blogs.html">博客</a></li>
+                <li><a href="resources.html">资源</a></li>
+                <li><a href="notes.html">笔记</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+            <div class="search">
+                <input type="text">
+                <button type="button" value="搜索"></button>
+            </div>
+            <div class="user">
+                <a href="#">站长登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="note_nav">
+        <a href="javascript:;" class="lang" index="1">C/C++</a>
+        <a href="javascript:;" class="lang" index="2">CSS</a>
+        <a href="javascript:;" class="lang" index="3">javascript</a>
+        <a href="javascript:;" class="lang" index="4">python</a>
+        <a href="javascript:;" class="lang_all">全部显示</a>
+        <div class="nav_number"><a href="javascript:;">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a></div>
+    </div>
+    <div class="notes">
+        <a href="#" class="note" index="1">
+            <div class="note_type">[C/C++]</div>
+            <div class="note_name">C语言语法规范</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="3">
+            <div class="note_type">[javascript]</div>
+            <div class="note_name">js中元素对象的获取</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="2">
+            <div class="note_type">[CSS]</div>
+            <div class="note_name">CSS中font的用法</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="1">
+            <div class="note_type">[C/C++]</div>
+            <div class="note_name">C语言语法规范</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="2">
+            <div class="note_type">[CSS]</div>
+            <div class="note_name">CSS中font的用法</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="1">
+            <div class="note_type">[C/C++]</div>
+            <div class="note_name">C语言语法规范</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="2">
+            <div class="note_type">[CSS]</div>
+            <div class="note_name">CSS中font的用法</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="3">
+            <div class="note_type">[javascript]</div>
+            <div class="note_name">js中元素对象的获取</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="2">
+            <div class="note_type">[CSS]</div>
+            <div class="note_name">CSS中font的用法</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="3">
+            <div class="note_type">[javascript]</div>
+            <div class="note_name">js中元素对象的获取</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="4">
+            <div class="note_type">[python]</div>
+            <div class="note_name">python语法规范</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="2">
+            <div class="note_type">[CSS]</div>
+            <div class="note_name">CSS中font的用法</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="4">
+            <div class="note_type">[python]</div>
+            <div class="note_name">python语法规范</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+        <a href="#" class="note" index="3">
+            <div class="note_type">[javascript]</div>
+            <div class="note_name">js中元素对象的获取</div>
+            <div class="upload_time">2020/11/16</div>
+        </a>
+    </div>
+    <div class="note_nav_bottom">
+        <div class="nav_number"><a href="javascript:;">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a></div>
+    </div>
+    <div class="footer">
+        <div class="info">本页面最后更新于2020年11月16日</div>
+    </div>
+    <script>
+        var lang_button = document.querySelectorAll('.lang');
+        var notes = document.querySelector('.notes').querySelectorAll('.note');
+        for (var o = 0; o < notes.length; o++) {
+            notes[o].addEventListener('mouseover', function() {
+                this.children[1].className = 'note_name underline'
+            })
+            notes[o].addEventListener('mouseout', function() {
+                this.children[1].className = 'note_name'
+            })
+        }
+        var flag = 0;
+        for (var i = 0; i < lang_button.length; i++) {
+            lang_button[i].addEventListener('click', function() {
+                var index1 = this.getAttribute('index');
+                for (var j = 0; j < notes.length; j++) {
+                    var index2 = notes[j].getAttribute('index');
+                    if (index1 == index2) {
+                        notes[j].style.display = 'block';
+                    } else {
+                        notes[j].style.display = 'none';
+                    }
+                }
+            })
+        }
+        var lang_all_button = document.querySelector('.lang_all')
+        lang_all_button.addEventListener('click', function() {
+            for (var i = 0; i < notes.length; i++)
+                notes[i].style.display = 'block';
+        })
+    </script>
+</body>
+
+</html>
