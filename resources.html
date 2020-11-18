@@ -32,6 +32,7 @@
     </div>
     <div class="resources_nav">
         上传文件
+        <input type="file">
         <button>点击上传</button>
         <div class="nav_number"><a href="javascript:;">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a></div>
     </div>
@@ -118,6 +119,13 @@
     <div class="footer">
         <div class="info">本页面最后更新于2020年11月16日</div>
     </div>
+    <script>
+        var file = document.querySelector('.resources_nav').querySelector('input');
+        var btn = document.querySelector('.resources_nav').querySelector('button');
+        btn.addEventListener('click', function() {
+            file.click();
+        })
+    </script>
 </body>
 
 </html>
