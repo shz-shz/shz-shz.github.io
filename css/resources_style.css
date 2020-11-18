@@ -105,6 +105,10 @@ a {
     border-bottom: 1px solid black;
 }
 
+.resources_nav input {
+    display: none;
+}
+
 .resources_nav button {
     width: 120px;
     height: 40px;
