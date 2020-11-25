@@ -26,7 +26,7 @@
                 <button type="button" value="搜索"></button>
             </div>
             <div class="user">
-                <a href="#">站长登录</a>
+                <a href="login.html">站长登录</a>
             </div>
         </div>
     </div>
@@ -39,7 +39,15 @@
     <div class="footer">
         <div class="info">本页面最后更新于2020年11月16日</div>
     </div>
-
+    <script>
+        var user = document.querySelector('.user').querySelector('a');
+        var params = location.search.substr(1);
+        var arr = params.split('=');
+        if (location.search != '')
+            user.innerHTML = arr[1];
+        else
+            user.innerHTML = '站长登录';
+    </script>
 </body>
 
 </html>
