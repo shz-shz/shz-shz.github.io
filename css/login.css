@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 52px;
+    width: 100%;
+    line-height: 52px;
+    background-color: rgb(18, 18, 18);
+    margin: auto;
+}
+
+.logolike {
+    float: left;
+    font-size: 25px;
+    color: rgb(173, 173, 173);
+    line-height: 52px;
+    padding-right: 100px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    height: 52px;
+    width: 1200px;
+    line-height: 52px;
+    margin: 0 auto;
+    ;
+}
+
+.nav ul li {
+    float: left;
+}
+
+.nav ul li a {
+    display: block;
+    height: 52px;
+    padding: 0 30px;
+    color: rgb(173, 173, 173);
+    font-size: 18px;
+}
+
+.nav ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.search {
+    float: left;
+    height: 26px;
+    width: 230px;
+    margin-left: 70px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    background-color: white;
+}
+
+.search input {
+    float: left;
+    display: block;
+    height: 26px;
+    width: 170px;
+    background-color: rgb(244, 244, 244);
+    border: 0;
+}
+
+.search button {
+    float: left;
+    display: block;
+    height: 26px;
+    width: 60px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.user {
+    float: right;
+    height: 52px;
+    padding: 0 10px;
+    line-height: 52px;
+    color: white;
+}
+
+.user a {
+    color: rgb(173, 173, 173);
+}
+
+.user a:hover {
+    color: white;
+}
+
+.main_login {
+    width: 1150px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 30px;
+}
+
+.login_header {
+    height: 100px;
+    margin-top: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.username_area {
+    height: 50px;
+    width: 900px;
+    margin: 35px 276px;
+}
+
+.username_text {
+    float: left;
+    padding: 3px 20px;
+    height: 30px;
+    font-weight: 700;
+}
+
+.username {
+    display: block;
+    float: left;
+    width: 350px;
+    height: 30px;
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 8px;
+    outline: none;
+}
+
+.username_tip_area {
+    float: left;
+    height: 30px;
+    padding: 7px 60px;
+    color: rgb(173, 173, 173);
+    font-size: 14px;
+}
+
+.password_area {
+    height: 50px;
+    width: 900px;
+    margin: 0 275px;
+    margin-bottom: 70px;
+}
+
+.password_text {
+    float: left;
+    padding: 3px 28px;
+    height: 30px;
+    font-weight: 700;
+}
+
+.password {
+    display: block;
+    float: left;
+    width: 350px;
+    height: 30px;
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 8px;
+    outline: none;
+}
+
+.password_tip_area {
+    float: left;
+    height: 30px;
+    padding: 7px 60px;
+    color: rgb(173, 173, 173);
+    font-size: 14px;
+}
+
+.buttons {
+    height: 40px;
+}
+
+.log {
+    display: none;
+}
+
+.login_button {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 40px;
+    margin-left: 420px;
+    color: white;
+    background-color: rgb(18, 18, 18);
+    border: 0px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.reset {
+    display: none;
+}
+
+.rreset {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 40px;
+    margin: 0 60px;
+    color: white;
+    background-color: rgb(18, 18, 18);
+    border: 0px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.wrong {
+    color: red;
+}
+
+.right {
+    color: green;
+}
+
+.login_success {
+    display: none;
+    position: absolute;
+    width: 665px;
+    height: 125px;
+    top: 250px;
+    left: 438px;
+    padding-top: 100px;
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.display {
+    display: block;
+}
