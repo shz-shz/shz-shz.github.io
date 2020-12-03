@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动的四种方法</title>
+    <link rel="stylesheet" href="../css/articles.css">
+    <script src="../../jquery-3.5.1.js"></script>
+    <script>
+        $(function() {
+            $(".comment_send_button").on("click", function() {
+                var text = $("<li></li>")
+                text.html($(".comment_textarea").val() + "<a href='javascript:;'>删除</a>");
+                $(".comment_list").prepend(text);
+                text.slideDown();
+                $(".comment_textarea").val("");
+            })
+            $(".comment_list").on("click", "a", function() {
+                $(this).parent().stop().slideUp(function() {
+                    $(this).remove();
+                });
+            })
+            $(".article_bottom li a").on("mouseover", function() {
+                var origin_src = $(this).children("img").attr("src");
+                var origin_length = origin_src.length;
+                var new_src = origin_src.substr(0, origin_length - 4);
+                $(this).children("img").attr("src", new_src + "_highlight.png");
+                $(this).children("span").addClass("current");
+            })
+            $(".article_bottom li a").on("mouseout", function() {
+                var origin_src = $(this).children("img").attr("src");
+                var origin_length = origin_src.length;
+                var new_src = origin_src.substr(0, origin_length - 14);
+                $(this).children("img").attr("src", new_src + ".png");
+                $(this).children("span").removeClass("current");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="logolike">
+                echo的个人博客
+            </div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blogs.html">博客</a></li>
+                <li><a href="resources.html">资源</a></li>
+                <li><a href="notes.html">笔记</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+            <div class="search">
+                <input type="text">
+                <button type="button" value="搜索"></button>
+            </div>
+            <div class="user">
+                <a href="login.html">站长登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="article_area">
+        <div class="article_title">CSS中清除浮动的4种方法</div>
+        <div class="article_info">
+            <div class="article_info_writer">作者:shzshz</div>
+            <div class="article_info_time">发布时间:2020年10月9日</div>
+        </div>
+        <div class="article_main">
+            <h2>为什么要清除浮动</h2>
+            <p>在CSS中，为了要让不同盒子在标准流下同一行显示，需要让盒子带上浮动属性。在实际开发中，例如文章区域和购物平台的商品显示区域，由于其中内容（也就是子盒子）数量不定，随时变化，需要让父盒子不指定高度。这样父盒子的高度会随子盒子的数量变化而变化。然而将子盒子加上浮动属性之后，由于父盒子高度为0，父盒子下方的内容会直接跑上来，显示在子盒子下方。为了解决这个问题，我们需要让父盒子清除浮动，以防下方内容跑到上面来。
+            </p>
+            <h2>1.额外标签法</h2>
+            <p>在子盒子最后一行代码下面额外添加一行新的块级标签，使用类中的clear属性进行清除。</p>
+            <img src="../images/articles_01.png">
+            <p>**注意：**这种方法虽然简单、易操作，但是添加了无意义的代码，让结构性变差。实际开发中不推荐使用。</p>
+            <h2>2.给父盒子的类中添加overflow属性</h2>
+            <p>使用类中的overflow属性进行清除浮动。</p>
+            <img src="../images/articles_02.png">
+            <p>以上的三种代码都能实现浮动清除。</p>
+            <p>**注意：**这种方法虽然简单，但是会使子盒子中超出父盒子范围的部分显示不出来。实际开发中不推荐使用。</p>
+            <h2>3.after伪元素法</h2>
+            <p>通过给父盒子添加clearfix属性来清除浮动。</p>
+            <img src="../images/articles_03.png">
+            <p>此方法结构简单，但对低版本的浏览器支持不好。在开发中大多采用此方法。</p>
+            <h2>4.双为元素清除浮动法</h2>
+            <p>给父盒子添加clearfix属性来清除浮动。</p>
+            <img src="../images/articles_04.png">
+            <p>此方法让代码更加简洁，但是对低版本浏览器仍然支持不足。在开发中大多主要采用此方法。</p>
+            <p>以上就是清除浮动的四种方法。</p>
+        </div>
+    </div>
+    <ul class="article_bottom">
+        <li>
+            <a href="javascript:;" class="article_like">
+                <img src="../images/article_like.png">
+                <span>点赞</span>
+            </a>
+        </li>
+        <li>
+            <a href="#comment_area" class="article_like">
+                <img src="../images/article_comment.png">
+                <span>评论</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;" class="article_like">
+                <img src="../images/article_share.png">
+                <span>分享</span>
+            </a>
+        </li>
+    </ul>
+    <div class="comment_area" id="comment_area">
+        <div>
+            <textarea class="comment_textarea" rows="3"></textarea>
+            <a href="javascript:;" class="comment_send_button">发布</a>
+        </div>
+        <ul class="comment_list">
+            <li class="comment">666<a href="javascript:;">删除</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

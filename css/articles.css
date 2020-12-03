@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 52px;
+    width: 100%;
+    line-height: 52px;
+    background-color: rgb(18, 18, 18);
+    margin: auto;
+}
+
+.logolike {
+    float: left;
+    font-size: 25px;
+    color: rgb(173, 173, 173);
+    line-height: 52px;
+    padding-right: 100px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    height: 52px;
+    width: 1200px;
+    line-height: 52px;
+    margin: 0 auto;
+    ;
+}
+
+.nav ul li {
+    float: left;
+}
+
+.nav ul li a {
+    display: block;
+    height: 52px;
+    padding: 0 30px;
+    color: rgb(173, 173, 173);
+    font-size: 18px;
+}
+
+.nav ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.search {
+    float: left;
+    height: 26px;
+    width: 230px;
+    margin-left: 70px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    background-color: white;
+}
+
+.search input {
+    float: left;
+    display: block;
+    height: 26px;
+    width: 170px;
+    background-color: rgb(244, 244, 244);
+    border: 0;
+}
+
+.search button {
+    float: left;
+    display: block;
+    height: 26px;
+    width: 60px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.user {
+    float: right;
+    height: 52px;
+    padding: 0 10px;
+    line-height: 52px;
+    color: white;
+}
+
+.user a {
+    color: rgb(173, 173, 173);
+}
+
+.user a:hover {
+    color: white;
+}
+
+.article_area {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.article_title {
+    width: 800px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* border: 1px solid black; */
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 80px;
+    text-align: center;
+}
+
+.article_info {
+    width: 1100px;
+    height: 60px;
+    margin: 0 auto;
+    /* border: 1px solid grey; */
+    color: rgb(100, 100, 100);
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.article_info_writer {
+    float: left;
+    margin-left: 180px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.article_info_time {
+    float: left;
+    margin-left: 570px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.article_main {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border: 1px solid black; */
+}
+
+.article_main h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.article_main p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 30px;
+}
+
+.article_main img {
+    margin: 10px 10px;
+    width: 980px;
+}
+
+.article_bottom {
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-top: 0;
+    background-color: rgb(248, 248, 248);
+}
+
+.article_bottom li a {
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 10px 20px;
+    line-height: 30px;
+    color: black;
+}
+
+.article_bottom li img {
+    height: 100%;
+}
+
+.current {
+    color: rgb(252, 82, 49)!important;
+}
+
+.comment_area {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-top: 1px solid rgb(173, 173, 173);
+}
+
+.comment_area>div {
+    width: 1200px;
+    height: 140px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.comment_textarea {
+    float: left;
+    width: 980px;
+    height: 60px;
+    padding: 10px 10px;
+    display: block;
+    margin-left: 20px;
+    margin-top: 30px;
+    resize: none;
+    font-size: 18px;
+}
+
+.comment_send_button {
+    display: block;
+    float: right;
+    width: 130px;
+    height: 80px;
+    margin-top: 30px;
+    margin-right: 20px;
+    color: white;
+    background-color: rgb(18, 18, 18);
+    border: 0px;
+    line-height: 80px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+.comment_list {
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.comment_list li {
+    display: none;
+    width: 1160px;
+    height: 40px;
+    margin: 10px auto;
+    padding: 20px 20px;
+    border: 2px solid rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+.comment_list li a {
+    display: block;
+    float: right;
+    margin-top: 32px;
+    color: rgb(100, 100, 100);
+}
